@@ -1,4 +1,5 @@
 let url = "https://fluttering-achieved-syringa.glitch.me/movies"
+let localMovies = []
 
 const generateMovieDisplay = ({
                                   title,
@@ -38,8 +39,11 @@ const generateMovieDisplay = ({
     editButton.addEventListener("click",function(){
         $('#editModal').modal('show')
         console.log(id)
-        $(`#${id}`).html()
-        console.log($(`#${id}`).html())
+        let info = localMovies.filter(movie => movie.id === id)
+
+
+        document.getElementById('editTitle').value = info[0].title
+        console.log(info.title)
     })
 
     titleDisplay.innerText = title
@@ -66,8 +70,9 @@ function getMovies() {
         // console.log(response)
         return response.json()
     }).then(function (movies) {
+        localMovies = movies
         document.getElementById('loading').style.display = 'none'
-        console.log(movies)
+        console.log(localMovies)
 
         movies.map(movie => {
             generateMovieDisplay(movie)
