@@ -14,10 +14,14 @@ const generateMovieDisplay = ({
     let ratingDisplay = document.createElement('span')
 
     let directorDisplay = document.createElement('p')
+    let deleteButton = document.createElement('button')
 
     // ADD CONTENT
     body.setAttribute('class' , 'single-movie')
     body.setAttribute('id', id)
+
+    deleteButton.innerText = 'Delete?'
+    deleteButton.setAttribute('class', 'btn btn-primary')
 
     titleDisplay.innerText = title
 
@@ -31,6 +35,7 @@ const generateMovieDisplay = ({
 
     body.appendChild(firstLine)
     body.appendChild(directorDisplay)
+    body.appendChild(deleteButton)
 
     document.getElementById('movie').appendChild(body)
 
