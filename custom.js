@@ -52,3 +52,36 @@ fetch(url).then(function(response){
 }).then(function(movies){
     console.log(movies)
 })
+
+
+
+
+
+
+let newMovie = {
+    "title": "The Dark Knight",
+    "rating": "5",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTk3NDE2NzI4NF5BMl5BanBnXkFtZTgwNzE1MzEyMTE@._V1_SX300.jpg",
+    "year": "2008",
+    "genre": "Action, Thriller, ",
+    "director": "Christopher Nolan",
+    "plot": "Batman struggles to maintain order against the Joker.",
+    "actors": "Christian Bale, Heath Ledger, Aaron Eckhart, Gary Oldman",
+    "id": `${Math.random() * 2000}`
+}
+
+const optionAdd = {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newMovie)
+}
+
+const addMovie = (movie) => {
+    fetch(url, optionAdd).then(function(response){
+        console.log(response)
+    })
+}
+
+// addMovie(newMovie)
