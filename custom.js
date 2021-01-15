@@ -107,9 +107,11 @@ const optionEdit = {
 }
 
 const editMovie = (movie) => {
-    fetch(url, optionEdit).then(function(response){
+    fetch(url + '/1337.327659575014', optionEdit).then(function(response){
         console.log(response)
     })
 }
+
+// editMovie(editedMovie)
 
 // addMovie(newMovie)
