@@ -53,6 +53,9 @@ function getMovies() {
     }).then(function (movies) {
         document.getElementById('loading').style.display = 'none'
         console.log(movies)
+
+        // document.getElementById('movie').innerHTML = ''
+
         movies.map(movie => {
 
             generateMovieDisplay(movie)
@@ -98,6 +101,7 @@ const addMovie = (movie) => {
         body: JSON.stringify(movie)
     }
     fetch(url, optionAdd).then(function(response){
+        getMovies()
         console.log(response)
     })
 }
