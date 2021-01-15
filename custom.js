@@ -22,7 +22,10 @@ const generateMovieDisplay = ({
 
     deleteButton.innerText = 'Delete?'
     deleteButton.setAttribute('class', 'btn btn-primary')
-
+    deleteButton.addEventListener("click",function(){
+        console.log(id)
+        deleteMovie(id)
+    })
     titleDisplay.innerText = title
 
     ratingDisplay.innerText = rating
@@ -138,6 +141,8 @@ document.getElementById('newMovieSubmit').addEventListener('click', function(e){
     addMovie(movie)
 })
 
+// document.getElementById('newMovieSubmit').addEventListener('click', function(e){
+//     e.preventDefault()
 // deleteMovie(10)
 // editMovie(editedMovie)
 
