@@ -101,7 +101,7 @@ const addMovie = (movie) => {
         body: JSON.stringify(movie)
     }
     fetch(url, optionAdd).then(function(response){
-        getMovies()
+        generateMovieDisplay(movie)
         console.log(response)
     })
 }
@@ -157,6 +157,7 @@ document.getElementById('newMovieSubmit').addEventListener('click', function(e){
         plot
     }
     addMovie(movie)
+
     // console.log(movie);
 })
 
