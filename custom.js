@@ -184,6 +184,7 @@ const deleteMovie = (id) => {
 document.getElementById('newMovieSubmit').addEventListener('click', function(e){
     e.preventDefault()
     var title= document.getElementById('newTitle').value
+
     var director= document.getElementById('newDirector').value
     var rating= document.getElementById('newRating').value
     var plot= document.getElementById('newPlot').value
@@ -193,8 +194,16 @@ document.getElementById('newMovieSubmit').addEventListener('click', function(e){
         rating,
         plot
     }
+    // if (title.value !== ''){
+    //     document.getElementById('newMovieSubmit').removeAttribute(disabled)
+    // }
     addMovie(movie)
 })
+let target = document.getElementById('newTitle')
+
+if (target.value !== ''){
+    document.getElementById('newMovieSubmit').removeAttribute(disabled)
+}
 
 const sortByRatings = () => {
     let ratingsSort = localMovies.sort(function(a, b){
