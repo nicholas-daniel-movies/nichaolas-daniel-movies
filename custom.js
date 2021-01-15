@@ -51,7 +51,7 @@ function getMovies() {
         // console.log(response)
         return response.json()
     }).then(function (movies) {
-
+        document.getElementById('loading').style.display = 'none'
         console.log(movies)
         movies.map(movie => {
 
