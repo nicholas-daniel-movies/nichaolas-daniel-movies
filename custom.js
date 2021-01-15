@@ -43,6 +43,9 @@ const generateMovieDisplay = ({
 
 
         document.getElementById('editTitle').value = info[0].title
+        document.getElementById('editRating').value = info[0].rating
+        document.getElementById('editDirector').value = info[0].director
+        document.getElementById('editPlot').value = info[0].plot
         console.log(info.title)
     })
 
