@@ -116,6 +116,17 @@ const editMovie = (movie) => {
     })
 }
 
+const optionDelete = {
+    method:'DELETE'
+}
+
+const deleteMovie = (id) => {
+    fetch( url + `/${id}`, optionDelete).then(function(response){
+        console.log(response)
+})
+}
+
+// deleteMovie('1337.327659575014')
 // editMovie(editedMovie)
 
 // addMovie(newMovie)
