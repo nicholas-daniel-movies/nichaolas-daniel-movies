@@ -84,4 +84,32 @@ const addMovie = (movie) => {
     })
 }
 
+// EDITING EDITING EDITING EDITING EDITING
+
+let editedMovie = {
+    "title": "The Edited Knight",
+    "rating": "Edited",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMTk3NDE2NzI4NF5BMl5BanBnXkFtZTgwNzE1MzEyMTE@._V1_SX300.jpg",
+    "year": "Edited",
+    "genre": "Edited",
+    "director": "Edited",
+    "plot": "Edited",
+    "actors": "Edited",
+    "id": `1337.327659575014`
+}
+
+const optionEdit = {
+    method: 'PUT',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(editedMovie)
+}
+
+const editMovie = (movie) => {
+    fetch(url, optionEdit).then(function(response){
+        console.log(response)
+    })
+}
+
 // addMovie(newMovie)
