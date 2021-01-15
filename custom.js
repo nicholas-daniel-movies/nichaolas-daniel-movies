@@ -1,4 +1,4 @@
-let url = "https://fluttering-achieved-syringa.glitch.me/movies!!!"
+let url = "https://fluttering-achieved-syringa.glitch.me/movies"
 
 let test = {
     title: 'movie title',
@@ -44,7 +44,7 @@ const generateMovieDisplay = ({
 
 }
 
-generateMovieDisplay(test)
+// generateMovieDisplay(test)
 
 function getMovies() {
     fetch(url).then(function (response) {
