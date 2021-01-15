@@ -3,7 +3,8 @@ let url = "https://fluttering-achieved-syringa.glitch.me/movies"
 const generateMovieDisplay = ({
                                   title,
                                   rating,
-                                  director = "No Director listed"
+                                  director = "No Director listed",
+                                    id
 }) => {
     // make ELEMENTS
     let body = document.createElement('div')
@@ -16,6 +17,7 @@ const generateMovieDisplay = ({
 
     // ADD CONTENT
     body.setAttribute('class' , 'single-movie')
+    body.setAttribute('id', id)
 
     titleDisplay.innerText = title
 
@@ -110,7 +112,9 @@ const deleteMovie = (id) => {
     }
 
     fetch( url + `/${id}`, optionDelete).then(function(response){
-        console.log(response)
+        document.getElementById(`${id}`).style.display = 'none'
+        // generateMovieDisplay()
+        console.log(response.json())
 })
 }
 
@@ -129,7 +133,7 @@ document.getElementById('newMovieSubmit').addEventListener('click', function(e){
     addMovie(movie)
 })
 
-// deleteMovie('1337.327659575014')
+// deleteMovie(10)
 // editMovie(editedMovie)
 
 // addMovie(newMovie)
