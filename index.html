@@ -37,6 +37,58 @@
                 <input id="newMovieSubmit" type="submit">
         </form>
     </div>
+
+        <section>
+            <button
+                    type="button"
+                    class="btn btn-primary"
+                    data-toggle="modal"
+                    data-target="#editModal"
+            >CLICK TO OPEN</button>
+            <div
+                    class="modal fade"
+                    id="editModal"
+<!--                    tabindex="-1"-->
+                    role="dialog"
+<!--                    aria-labelledby="exampleModalLabel"-->
+<!--                    aria-hidden="true"-->
+            >
+                <div
+                        class="modal-dialog"
+                        role="document"
+                >
+                    <div class="modal-content">
+
+                        <div class="form container">
+                            <form method="POST">
+                                <label for="newTitle"><strong>Title</strong></label>
+                                <br>
+                                <input id="newTitle" type="text" name="title" placeholder="Title">
+                                <br>
+                                <label for="newDirector"><strong>Director</strong></label>
+                                <br>
+                                <input id="newDirector" type="text" name="director" placeholder="Director">
+                                <br>
+                                <label for="newRating"><strong>Rating</strong></label>
+                                <br>
+                                <input id="newRating" type="text" name="rating" placeholder="Rating">
+                                <br>
+                                <label for="newPlot"><strong>Plot:</strong></label>
+                                <br>
+                                <textarea id="newPlot" name="newPlot" cols="32" rows="6"></textarea>
+                                <br>
+                                <input id="newMovieSubmit" type="submit">
+                            </form>
+                        </div>
+
+                        <button class="btn btn-secondary" data-dismiss="modal">
+                            X
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!--    </div>-->
     <script src="custom.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
