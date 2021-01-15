@@ -103,7 +103,6 @@ function getMovies() {
     }).then(function (movies) {
         localMovies = movies
         document.getElementById('loading').style.display = 'none'
-        console.log(localMovies)
 
         movies.map(movie => {
             generateMovieDisplay(movie)
@@ -195,6 +194,48 @@ document.getElementById('newMovieSubmit').addEventListener('click', function(e){
     }
     addMovie(movie)
 })
+
+const sortByRatings = () => {
+    let ratingsSort = localMovies.sort(function(a, b){
+        return parseInt(a.rating) - parseInt(b.rating)
+    })
+    $('#movie').html("<div class= \"container\" id=\"movie\">\n" +
+        "    </div>")
+    ratingsSort.map(movie => {
+        generateMovieDisplay(movie)
+    })
+}
+
+const sortByTitle = () => {
+    let titleSort = localMovies.sort(function(a, b){
+        let titleA = a.title.toUpperCase()
+        let titleB = b.title.toUpperCase()
+        if(titleA < titleB){
+            return -1;
+        }
+        if(titleA > titleB){
+            return 1;
+        }
+        return 0
+    })
+
+    $('#movie').html("<div class= \"container\" id=\"movie\">\n" +
+
+        "    </div>")
+
+    titleSort.map(movie => {
+        generateMovieDisplay(movie)
+    })
+}
+
+document.getElementById('rating-sort').addEventListener('click', sortByRatings)
+document.getElementById('title-sort').addEventListener('click', sortByTitle)
+
+
+// console.log(titleSort);
+
+
+
 
 // deleteMovie(10)
 // editMovie(editedMovie)
