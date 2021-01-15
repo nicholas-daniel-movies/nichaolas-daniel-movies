@@ -128,7 +128,10 @@ const addMovie = (movie) => {
     fetch(url, optionAdd).then(function(response){
         generateMovieDisplay(movie)
         console.log(response)
-    })
+    }).catch( error => {
+        alert('Failed to add')
+        console.error(error)
+    });
 }
 
 // EDITING EDITING EDITING EDITING EDITING
@@ -144,7 +147,10 @@ const editMovie = (movie, id) => {
     fetch(url + `/${id}`, optionEdit).then(function(response){
         console.log(response)
         updateIndividual(movie, id)
-    })
+    }).catch( error => {
+        alert('Failed to Edit')
+        console.error(error)
+    });
 }
 
 const updateIndividual = (movie, id) => {
@@ -168,7 +174,10 @@ const deleteMovie = (id) => {
         document.getElementById(`${id}`).style.display = 'none'
         // generateMovieDisplay()
         console.log(response.json())
-})
+    }).catch( error => {
+        alert('Failed to Delete')
+        console.error(error)
+    });
 }
 
 // NEW MOVIE BUTTON
