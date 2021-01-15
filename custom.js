@@ -143,7 +143,20 @@ const editMovie = (movie, id) => {
     }
     fetch(url + `/${id}`, optionEdit).then(function(response){
         console.log(response)
+        updateIndividual(movie, id)
     })
+}
+
+const updateIndividual = (movie, id) => {
+    // document.getElementById(`${id}`).style.background = 'blue'
+    // document.querySelector('#movie').innerHTML = ''
+    $('#movie').html("<div class= \"container\" id=\"movie\">\n" +
+        "        <div id=\"loading\">\n" +
+        "            <h2 id=\"load-message\">LOADING...</h2>\n" +
+        "        </div>\n" +
+        "    </div>")
+    getMovies()
+
 }
 
 const deleteMovie = (id) => {
