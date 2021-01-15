@@ -16,13 +16,18 @@ Your application should:
 
 On page load:
 
-Display a "loading..." message
-Make an AJAX request to get a listing of all the movies
-When the initial AJAX request comes back, remove the "loading..." message and replace it with HTML generated from the json response your code receives
+- Display a "loading..." message
+
+- Make an AJAX request to get a listing of all the movies
+- When the initial AJAX request comes back, remove the "loading..." message and replace it with HTML generated from the json response your code receives
+
 Allow users to add new movies
 
-Create a form for adding a new movie that has fields for the movie's title and rating
+- Create a form for adding a new movie that has fields 
+  for the movie's title and rating
 When the form is submitted, the page should not reload / refresh, instead, your javascript should make a POST request to /movies with the information the user put into the form
+
+
 Allow users to edit existing movies
 
 Give users the option to edit an existing movie
