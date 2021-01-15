@@ -104,6 +104,7 @@ function getMovies() {
         localMovies = movies
         document.getElementById('loading').style.display = 'none'
 
+        console.log(movies)
         movies.map(movie => {
             generateMovieDisplay(movie)
         })
