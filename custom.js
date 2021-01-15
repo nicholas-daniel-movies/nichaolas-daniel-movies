@@ -1,4 +1,4 @@
-let url = "https://fluttering-achieved-syringa.glitch.me/movies"
+let url = "https://fluttering-achieved-syringa.glitch.me/movies!!!"
 
 let test = {
     title: 'movie title',
@@ -57,7 +57,11 @@ function getMovies() {
 
             generateMovieDisplay(movie)
         })
-    })
+    }).catch( error => {
+        document.getElementById('loading').style.display = 'block'
+        document.getElementById('load-message').innerText = 'Failed to load Movies'
+        console.error(error)
+    });
 }
 getMovies()
 
