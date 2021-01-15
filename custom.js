@@ -36,6 +36,7 @@ const generateMovieDisplay = ({
     // data-toggle="modal"
     // data-target="#editModal"
     editButton.addEventListener("click",function(){
+        $('#editModal').modal('show')
         console.log(id)
 
     })
