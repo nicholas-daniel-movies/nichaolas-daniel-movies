@@ -69,6 +69,7 @@ const generateMovieDisplay = ({
                 plot: newPlot
                 // newTITLE
             }
+            editMovie(finalEdits, id);
             // HERE WE CALL EDIT METHOD
             console.log(finalEdits)
         })
@@ -152,16 +153,17 @@ let editedMovie = {
     "id": `1337.327659575014`
 }
 
-const optionEdit = {
-    method: 'PUT',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(editedMovie)
-}
 
-const editMovie = (movie) => {
-    fetch(url + '/1337.327659575014', optionEdit).then(function(response){
+
+const editMovie = (movie, id) => {
+    const optionEdit = {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(movie)
+    }
+    fetch(url + `/${id}`, optionEdit).then(function(response){
         console.log(response)
     })
 }
