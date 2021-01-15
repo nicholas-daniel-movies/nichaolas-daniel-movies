@@ -38,7 +38,8 @@ const generateMovieDisplay = ({
     editButton.addEventListener("click",function(){
         $('#editModal').modal('show')
         console.log(id)
-
+        $(`#${id}`).html()
+        console.log($(`#${id}`).html())
     })
 
     titleDisplay.innerText = title
