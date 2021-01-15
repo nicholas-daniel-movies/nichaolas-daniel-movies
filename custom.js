@@ -52,12 +52,21 @@ const generateMovieDisplay = ({
             console.log('BOO-yah!')
             let {actors, genre, poster, year} = info[0]
 
+            let newTitle = document.getElementById('editTitle').value
+            let newRating = document.getElementById('editRating').value
+            let newDirector = document.getElementById('editDirector').value
+            let newPlot = document.getElementById('editPlot').value
+
             let finalEdits ={
                 actors,
                 genre,
                 id,
                 poster,
-                year
+                year,
+                title: newTitle,
+                rating: newRating,
+                director: newDirector,
+                plot: newPlot
                 // newTITLE
             }
             // HERE WE CALL EDIT METHOD
