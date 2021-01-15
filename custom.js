@@ -46,7 +46,25 @@ const generateMovieDisplay = ({
         document.getElementById('editRating').value = info[0].rating
         document.getElementById('editDirector').value = info[0].director
         document.getElementById('editPlot').value = info[0].plot
-        console.log(info.title)
+
+        document.getElementById('editMovieSubmit').addEventListener('click', function(e){
+            e.preventDefault()
+            console.log('BOO-yah!')
+            let {actors, genre, poster, year} = info[0]
+
+            let finalEdits ={
+                actors,
+                genre,
+                id,
+                poster,
+                year
+                // newTITLE
+            }
+            // HERE WE CALL EDIT METHOD
+            console.log(finalEdits)
+        })
+
+
     })
 
     titleDisplay.innerText = title
