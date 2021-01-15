@@ -90,6 +90,13 @@ const optionAdd = {
 }
 
 const addMovie = (movie) => {
+    const optionAdd = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(movie)
+    }
     fetch(url, optionAdd).then(function(response){
         console.log(response)
     })
@@ -145,7 +152,8 @@ document.getElementById('newMovieSubmit').addEventListener('click', function(e){
         rating,
         plot
     }
-    console.log(movie);
+    addMovie(movie)
+    // console.log(movie);
 })
 
 // deleteMovie('1337.327659575014')
