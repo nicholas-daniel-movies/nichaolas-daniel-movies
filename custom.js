@@ -46,17 +46,20 @@ const generateMovieDisplay = ({
 
 generateMovieDisplay(test)
 
-fetch(url).then(function(response){
-    // console.log(response)
-    return response.json()
-}).then(function(movies){
-    console.log(movies)
-    movies.map(movie => {
+function getMovies() {
+    fetch(url).then(function (response) {
+        // console.log(response)
+        return response.json()
+    }).then(function (movies) {
 
-        generateMovieDisplay(movie)
+        console.log(movies)
+        movies.map(movie => {
+
+            generateMovieDisplay(movie)
+        })
     })
-})
-
+}
+getMovies()
 
 
 
