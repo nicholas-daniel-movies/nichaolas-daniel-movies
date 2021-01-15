@@ -9,13 +9,13 @@
 </head>
 <body>
     <h1>Movie Time!</h1>
+
     <div class= "container" id="movie">
         <div id="loading">
             <h2 id="load-message">LOADING...</h2>
         </div>
-
-        <button id="editEntry">Edit this Entry?</button>
     </div>
+
     <div class="form container">
             <form method="POST">
                 <label for="newTitle"><strong>Title</strong></label>
@@ -38,13 +38,14 @@
         </form>
     </div>
 
+<!--    MODAL-->
         <section>
-            <button
-                    type="button"
-                    class="btn btn-primary"
-                    data-toggle="modal"
-                    data-target="#editModal"
-            >CLICK TO OPEN</button>
+<!--            <button-->
+<!--                    type="button"-->
+<!--                    class="btn btn-primary"-->
+<!--                    data-toggle="modal"-->
+<!--                    data-target="#editModal"-->
+<!--            >CLICK TO OPEN</button>-->
 
             <div
                     class="modal fade"
@@ -87,6 +88,7 @@
                 </div>
             </div>
         </section>
+
 <!--    </div>-->
     <script src="custom.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
