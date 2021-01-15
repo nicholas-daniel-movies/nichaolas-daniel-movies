@@ -6,8 +6,12 @@ let test = {
     director: 'Daniel'
 }
 
-const generateMovieDisplay = (movie) => {
-    let { title, rating, director } = movie
+const generateMovieDisplay = ({
+                                  title,
+                                  rating,
+                                  director = "No Director listed"
+}) => {
+    // let { title, rating, director } = movie
 
     // make ELEMENTS
     let body = document.createElement('div')
