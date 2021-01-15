@@ -133,6 +133,21 @@ const deleteMovie = (id) => {
 })
 }
 
+document.getElementById('newMovieSubmit').addEventListener('click', function(e){
+    e.preventDefault()
+    var title= document.getElementById('newTitle').value
+    var director= document.getElementById('newDirector').value
+    var rating= document.getElementById('newRating').value
+    var plot= document.getElementById('newPlot').value
+    let movie = {
+        title,
+        director,
+        rating,
+        plot
+    }
+    console.log(movie);
+})
+
 // deleteMovie('1337.327659575014')
 // editMovie(editedMovie)
 
