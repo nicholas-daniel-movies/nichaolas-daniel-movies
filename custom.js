@@ -51,6 +51,10 @@ fetch(url).then(function(response){
     return response.json()
 }).then(function(movies){
     console.log(movies)
+    movies.map(movie => {
+
+        generateMovieDisplay(movie)
+    })
 })
 
 
