@@ -15,6 +15,7 @@ const generateMovieDisplay = ({
 
     let directorDisplay = document.createElement('p')
     let deleteButton = document.createElement('button')
+    let editButton = document.createElement('button')
 
     // ADD CONTENT
     body.setAttribute('class' , 'single-movie')
@@ -26,6 +27,19 @@ const generateMovieDisplay = ({
         console.log(id)
         deleteMovie(id)
     })
+
+    editButton.innerText = "Edit"
+    editButton.setAttribute('class', 'btn btn-success')
+    editButton.setAttribute('data-toggle', '#modal')
+    editButton.setAttribute('data-target', '#editModal')
+    editButton.setAttribute('type', 'button')
+    // data-toggle="modal"
+    // data-target="#editModal"
+    editButton.addEventListener("click",function(){
+        console.log(id)
+
+    })
+
     titleDisplay.innerText = title
 
     ratingDisplay.innerText = rating
@@ -39,6 +53,7 @@ const generateMovieDisplay = ({
     body.appendChild(firstLine)
     body.appendChild(directorDisplay)
     body.appendChild(deleteButton)
+    body.appendChild(editButton)
 
     document.getElementById('movie').appendChild(body)
 

@@ -45,14 +45,13 @@
                     data-toggle="modal"
                     data-target="#editModal"
             >CLICK TO OPEN</button>
+
             <div
                     class="modal fade"
                     id="editModal"
-<!--                    tabindex="-1"-->
-                    role="dialog"
-<!--                    aria-labelledby="exampleModalLabel"-->
-<!--                    aria-hidden="true"-->
-            >
+                    role="dialog">
+
+
                 <div
                         class="modal-dialog"
                         role="document"
@@ -61,23 +60,23 @@
 
                         <div class="form container">
                             <form method="POST">
-                                <label for="newTitle"><strong>Title</strong></label>
+                                <label for="editTitle"><strong>Title</strong></label>
                                 <br>
-                                <input id="newTitle" type="text" name="title" placeholder="Title">
+                                <input id="editTitle" type="text" name="title" placeholder="Title">
                                 <br>
-                                <label for="newDirector"><strong>Director</strong></label>
+                                <label for="editDirector"><strong>Director</strong></label>
                                 <br>
-                                <input id="newDirector" type="text" name="director" placeholder="Director">
+                                <input id="editDirector" type="text" name="director" placeholder="Director">
                                 <br>
-                                <label for="newRating"><strong>Rating</strong></label>
+                                <label for="editRating"><strong>Rating</strong></label>
                                 <br>
-                                <input id="newRating" type="text" name="rating" placeholder="Rating">
+                                <input id="editRating" type="text" name="rating" placeholder="Rating">
                                 <br>
-                                <label for="newPlot"><strong>Plot:</strong></label>
+                                <label for="editPlot"><strong>Plot:</strong></label>
                                 <br>
-                                <textarea id="newPlot" name="newPlot" cols="32" rows="6"></textarea>
+                                <textarea id="editPlot" name="newPlot" cols="32" rows="6"></textarea>
                                 <br>
-                                <input id="newMovieSubmit" type="submit">
+                                <input id="editMovieSubmit" type="submit">
                             </form>
                         </div>
 
