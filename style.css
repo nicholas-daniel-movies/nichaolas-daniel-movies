@@ -30,8 +30,16 @@
     opacity: 0.6;
 }
 
+#sorting {
+    /*margin: 0px auto;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .single-movie {
     border: 1px solid black;
+    margin: 0 auto;
     max-width: 70%;
     box-shadow: 0px 0px 10px black;
 }
