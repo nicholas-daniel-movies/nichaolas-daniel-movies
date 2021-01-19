@@ -7,7 +7,12 @@ let localMovies = []
 //         $('#searching').slideUp()
 //     })
 // })
-
+$('#searching').ready(function (){
+    $('#searching').hide();
+})
+$('#search-toggle').click(function() {
+    $('#searching').toggle();
+});
 
 const generateMovieDisplay = ({
                                   title,
