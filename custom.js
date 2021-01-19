@@ -92,15 +92,18 @@ const generateMovieDisplay = ({
     titleDisplay.setAttribute('class', 'mr-2')
     titleDisplay.innerText = title
 
-    ratingDisplay.innerText = rating + ''
+    ratingDisplay.innerText = rating
 
     star.setAttribute('class', 'far fa-star')
 
+    directorDisplay.setAttribute('class', 'mt-3')
     directorDisplay.innerText = 'Director(s): ' + director
 
     details.setAttribute('class', 'content-half')
     plotDisplay.setAttribute('class', 'content-half')
     plotDisplay.innerText = plot
+
+    buttonsDisplay.setAttribute('class', 'd-flex justify-content-around')
 
     buttonsDisplay.appendChild(deleteButton)
     buttonsDisplay.appendChild(editButton)
