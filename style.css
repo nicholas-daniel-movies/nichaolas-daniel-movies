@@ -1,13 +1,33 @@
-#jumbo {
-    background-image: url("img/HS_HeaderPhoto2.jpg");
-    background-size: cover;
-    height: 400px;
+/*#jumbo {*/
+/*    background-image: url("img/HS_HeaderPhoto2.jpg");*/
+/*    background-size: cover;*/
+/*    height: 400px;*/
+/*    position: relative;*/
+/*}*/
+
+/*#blank {*/
+/*    position: absolute;*/
+/*    background: black;*/
+/*    opacity: 0.5;*/
+/*}*/
+
+#top {
+    color: white;
+    background: #333;
+    padding: 2rem;
+    position: relative;
+    height: 300px;
 }
 
-#blank {
+#top:before {
+    content: '';
+    background: url("img/HS_HeaderPhoto2.jpg") no-repeat center center/cover;
     position: absolute;
-    background: black;
-    opacity: 0.5;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
 }
 
 .single-movie {
