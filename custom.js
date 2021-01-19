@@ -163,6 +163,12 @@ const addMovie = (movie) => {
     }
     fetch(url, optionAdd).then(function(response){
         generateMovieDisplay(movie)
+
+        document.getElementById('newTitle').value = ''
+        document.getElementById('newDirector').value = ''
+        document.getElementById('newRating').value = ''
+        document.getElementById('newPlot').value = ''
+        document.getElementById('newGenre').value = ''
     }).catch( error => {
         alert('Failed to add')
         console.error(error)
