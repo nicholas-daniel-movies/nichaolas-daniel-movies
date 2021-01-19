@@ -13,6 +13,7 @@ const generateMovieDisplay = ({
 
     let titleDisplay = document.createElement('p')
     let ratingDisplay = document.createElement('span')
+    let star = document.createElement('i')
 
     let directorDisplay = document.createElement('p')
     let deleteButton = document.createElement('button')
@@ -84,11 +85,14 @@ const generateMovieDisplay = ({
 
     ratingDisplay.innerText = rating + ''
 
+    star.setAttribute('class', 'far fa-star')
+
     directorDisplay.innerText = 'Director(s): ' + director
 
     // ASSEMBLY
     firstLine.appendChild(titleDisplay)
     firstLine.appendChild(ratingDisplay)
+    firstLine.appendChild(star)
 
     body.appendChild(firstLine)
     body.appendChild(directorDisplay)
