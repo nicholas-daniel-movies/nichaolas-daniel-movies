@@ -70,14 +70,19 @@
                     id="editModal"
                     role="dialog">
 
-
                 <div
                         class="modal-dialog"
                         role="document"
                 >
-                    <div class="modal-content">
 
-                        <div class=" container">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5>Edit</h5>
+                            <button class="btn btn-secondary" class="close" data-dismiss="modal">
+                                X
+                            </button>
+                        </div>
+                        <div class="container">
                             <form method="POST">
                                 <div class="form-group">
                                     <label for="editTitle"><strong>Title</strong></label>
@@ -112,9 +117,7 @@
                             </form>
                         </div>
 
-                        <button class="btn btn-secondary" data-dismiss="modal">
-                            X
-                        </button>
+
                     </div>
                 </div>
             </div>
