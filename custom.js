@@ -222,9 +222,26 @@ document.getElementById('newMovieSubmit').addEventListener('click', function(e){
     e.preventDefault()
     var title= document.getElementById('newTitle').value
 
+    if(title === ''){
+        title = 'No Title listed'
+    }
+
     var director= document.getElementById('newDirector').value
+
+    if(director === ''){
+        director = 'No Director listed'
+    }
     var rating= document.getElementById('newRating').value
+
+    if(rating === ''){
+        rating = 'No rating listed'
+    }
     var plot= document.getElementById('newPlot').value
+
+    if(plot === ''){
+        plot = 'No Plot provided'
+    }
+
     let movie = {
         title,
         director,
