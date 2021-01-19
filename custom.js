@@ -246,11 +246,18 @@ document.getElementById('newMovieSubmit').addEventListener('click', function(e){
         plot = 'No Plot provided'
     }
 
+    var genre = document.getElementById('newGenre').value
+
+    if(genre === ''){
+        genre = 'No Genre provided'
+    }
+
     let movie = {
         title,
         director,
         rating,
-        plot
+        plot,
+        genre
     }
     // if (title.value !== ''){
     //     document.getElementById('newMovieSubmit').removeAttribute(disabled)
