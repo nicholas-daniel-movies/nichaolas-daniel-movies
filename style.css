@@ -37,6 +37,13 @@
     align-items: center;
 }
 
+#searching {
+    margin: 0 auto;
+    border: 1px solid black;
+
+    width: 80%
+}
+
 .single-movie {
     border: 1px solid black;
     margin: 0 auto;
