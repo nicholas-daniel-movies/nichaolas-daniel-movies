@@ -33,6 +33,7 @@
 .single-movie {
     border: 1px solid black;
     max-width: 70%;
+    box-shadow: 0px 0px 10px black;
 }
 
 .single-movie div p {
