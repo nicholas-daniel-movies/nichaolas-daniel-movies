@@ -58,6 +58,7 @@ const generateMovieDisplay = ({
         document.getElementById('editRating').value = info[0].rating
         document.getElementById('editDirector').value = info[0].director
         document.getElementById('editPlot').value = info[0].plot
+        document.getElementById('editGenre').value = info[0].genre
 
         document.getElementById('editMovieSubmit').addEventListener('click', function(e){
             e.preventDefault()
@@ -68,6 +69,7 @@ const generateMovieDisplay = ({
             let newRating = document.getElementById('editRating').value
             let newDirector = document.getElementById('editDirector').value
             let newPlot = document.getElementById('editPlot').value
+            let newGenre = document.getElementById('editGenre').value
 
             let finalEdits ={
                 actors,
@@ -78,7 +80,8 @@ const generateMovieDisplay = ({
                 title: newTitle,
                 rating: newRating,
                 director: newDirector,
-                plot: newPlot
+                plot: newPlot,
+                genre: newGenre
                 // newTITLE
             }
             editMovie(finalEdits, id);
