@@ -1,3 +1,15 @@
+#jumbo {
+    background-image: url("img/HS_HeaderPhoto2.jpg");
+    background-size: cover;
+    height: 400px;
+}
+
+#blank {
+    position: absolute;
+    background: black;
+    opacity: 0.5;
+}
+
 .single-movie {
     border: 1px solid black;
     max-width: 70%;
