@@ -40,6 +40,12 @@
 
 }
 
+#addForm{
+    border: 1px solid black;
+    max-width: 50%;
+    margin-bottom: 40px;
+    padding: 10px;
+}
 footer {
     font-size: 2rem;
     padding: 40px;
