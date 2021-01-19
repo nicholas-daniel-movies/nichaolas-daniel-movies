@@ -7,9 +7,11 @@ let localMovies = []
 //         $('#searching').slideUp()
 //     })
 // })
+
 $('#searching').ready(function (){
     $('#searching').hide();
 })
+
 $('#search-toggle').click(function() {
     $('#searching').toggle();
 });
@@ -336,6 +338,26 @@ const searchByTitle = () => {
 }
 
 document.getElementById('searchButton').addEventListener('click', searchByTitle)
+
+const searchByGenre = () => {
+    $('#movie').html("<div class= \"container\" id=\"movie\">\n" +
+
+        "    </div>")
+    var searchText = document.getElementById('genre-search').value
+
+
+    let searchedArray = localMovies.filter(movie => {
+        if(movie.genre){
+            return movie.genre.toLowerCase().includes(searchText.toLowerCase())
+        }
+    })
+    // console.log(searchedArray)
+
+    searchedArray.map(result => generateMovieDisplay(result))
+}
+
+document.getElementById('searchGenreButton').addEventListener('click', searchByGenre)
+
 
 // console.log(titleSort);
 
