@@ -1,13 +1,6 @@
 let url = "https://fluttering-achieved-syringa.glitch.me/movies"
 let localMovies = []
 
-// $().ready(function(){
-//     // $('#searching').hide()
-//     $('#search-toggle').click(function(){
-//         $('#searching').slideUp()
-//     })
-// })
-
 $('#searching').ready(function (){
     $('#searching').hide();
 })
@@ -31,23 +24,18 @@ const generateMovieDisplay = ({
     let plotDisplay = document.createElement('div')
     let buttonsDisplay = document.createElement('div')
 
-
-    let firstLine = document.createElement('div')
-
     let titleDisplay = document.createElement('p')
     let ratingDisplay = document.createElement('span')
     let star = document.createElement('i')
-
     let directorDisplay = document.createElement('p')
     let genreDisplay = document.createElement('p')
+
     let deleteButton = document.createElement('button')
     let editButton = document.createElement('button')
 
     // ADD CONTENT
     body.setAttribute('class' , 'single-movie my-3 p-3')
     body.setAttribute('id', id)
-
-    firstLine.setAttribute('class', 'd-flex')
 
     deleteButton.innerText = 'Delete?'
     deleteButton.setAttribute('class', 'btn btn-primary')
@@ -97,17 +85,17 @@ const generateMovieDisplay = ({
                 director: newDirector,
                 plot: newPlot,
                 genre: newGenre
-                // newTITLE
             }
             editMovie(finalEdits, id);
             // HERE WE CALL EDIT METHOD
-            console.log(finalEdits)
         })
 
 
     })
 
     contentDisplay.setAttribute('class', 'd-flex')
+
+    details.setAttribute('class', 'content-half')
 
     titleDisplay.setAttribute('class', 'mr-2')
     titleDisplay.innerText = title
@@ -120,20 +108,14 @@ const generateMovieDisplay = ({
     directorDisplay.innerText = 'Director(s): ' + director
     genreDisplay.setAttribute('class', 'mt-3')
     genreDisplay.innerText = 'Genre(s): ' + genre
-    details.setAttribute('class', 'content-half')
+
+
     plotDisplay.setAttribute('class', 'content-half')
     plotDisplay.innerText = plot
 
     buttonsDisplay.setAttribute('class', 'd-flex justify-content-around')
 
-    buttonsDisplay.appendChild(deleteButton)
-    buttonsDisplay.appendChild(editButton)
-
     // ASSEMBLY
-    // firstLine.appendChild(titleDisplay)
-    // firstLine.appendChild(ratingDisplay)
-    // firstLine.appendChild(star)
-
     details.appendChild(titleDisplay)
     details.appendChild(ratingDisplay)
     details.appendChild(star)
@@ -143,21 +125,17 @@ const generateMovieDisplay = ({
     contentDisplay.appendChild(details)
     contentDisplay.appendChild(plotDisplay)
 
+    buttonsDisplay.appendChild(deleteButton)
+    buttonsDisplay.appendChild(editButton)
+
     body.appendChild(contentDisplay)
     body.appendChild(buttonsDisplay)
 
-    // body.appendChild(firstLine)
-    // body.appendChild(directorDisplay)
-    // body.appendChild(deleteButton)
-    // body.appendChild(editButton)
-
     document.getElementById('movie').appendChild(body)
-
 }
 
 function getMovies() {
     fetch(url).then(function (response) {
-        // console.log(response)
         return response.json()
     }).then(function (movies) {
         localMovies = movies
@@ -186,7 +164,6 @@ const addMovie = (movie) => {
     }
     fetch(url, optionAdd).then(function(response){
         generateMovieDisplay(movie)
-        console.log(response)
     }).catch( error => {
         alert('Failed to add')
         console.error(error)
@@ -204,7 +181,6 @@ const editMovie = (movie, id) => {
         body: JSON.stringify(movie)
     }
     fetch(url + `/${id}`, optionEdit).then(function(response){
-        console.log(response)
         updateIndividual(movie, id)
     }).catch( error => {
         alert('Failed to Edit')
@@ -213,15 +189,12 @@ const editMovie = (movie, id) => {
 }
 
 const updateIndividual = (movie, id) => {
-    // document.getElementById(`${id}`).style.background = 'blue'
-    // document.querySelector('#movie').innerHTML = ''
     $('#movie').html("<div class= \"container\" id=\"movie\">\n" +
         "        <div id=\"loading\">\n" +
         "            <h2 id=\"load-message\">LOADING...</h2>\n" +
         "        </div>\n" +
         "    </div>")
     getMovies()
-
 }
 
 const deleteMovie = (id) => {
@@ -231,8 +204,6 @@ const deleteMovie = (id) => {
 
     fetch( url + `/${id}`, optionDelete).then(function(response){
         document.getElementById(`${id}`).style.display = 'none'
-        // generateMovieDisplay()
-        console.log(response.json())
     }).catch( error => {
         alert('Failed to Delete')
         console.error(error)
@@ -242,30 +213,28 @@ const deleteMovie = (id) => {
 // NEW MOVIE BUTTON
 document.getElementById('newMovieSubmit').addEventListener('click', function(e){
     e.preventDefault()
-    var title= document.getElementById('newTitle').value
 
+    var title= document.getElementById('newTitle').value
     if(title === ''){
         title = 'No Title listed'
     }
 
     var director= document.getElementById('newDirector').value
-
     if(director === ''){
         director = 'No Director listed'
     }
-    var rating= document.getElementById('newRating').value
 
+    var rating= document.getElementById('newRating').value
     if(rating === ''){
         rating = 'No rating listed'
     }
-    var plot= document.getElementById('newPlot').value
 
+    var plot= document.getElementById('newPlot').value
     if(plot === ''){
         plot = 'No Plot provided'
     }
 
     var genre = document.getElementById('newGenre').value
-
     if(genre === ''){
         genre = 'No Genre provided'
     }
@@ -277,16 +246,9 @@ document.getElementById('newMovieSubmit').addEventListener('click', function(e){
         plot,
         genre
     }
-    // if (title.value !== ''){
-    //     document.getElementById('newMovieSubmit').removeAttribute(disabled)
-    // }
+
     addMovie(movie)
 })
-let target = document.getElementById('newTitle')
-
-if (target.value !== ''){
-    document.getElementById('newMovieSubmit').removeAttribute(disabled)
-}
 
 const sortByRatings = () => {
     let ratingsSort = localMovies.sort(function(a, b){
@@ -351,18 +313,10 @@ const searchByGenre = () => {
             return movie.genre.toLowerCase().includes(searchText.toLowerCase())
         }
     })
-    // console.log(searchedArray)
-
     searchedArray.map(result => generateMovieDisplay(result))
 }
 
 document.getElementById('searchGenreButton').addEventListener('click', searchByGenre)
-
-
-// console.log(titleSort);
-
-
-
 
 // deleteMovie(10)
 // editMovie(editedMovie)

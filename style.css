@@ -1,16 +1,3 @@
-/*#jumbo {*/
-/*    background-image: url("img/HS_HeaderPhoto2.jpg");*/
-/*    background-size: cover;*/
-/*    height: 400px;*/
-/*    position: relative;*/
-/*}*/
-
-/*#blank {*/
-/*    position: absolute;*/
-/*    background: black;*/
-/*    opacity: 0.5;*/
-/*}*/
-
 #top {
     color: white;
     background: #333;
@@ -31,7 +18,6 @@
 }
 
 #sorting {
-    /*margin: 0px auto;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,5 +64,4 @@ footer a {
 
 footer a:hover {
     text-decoration: none;
-    /*color: white;*/
 }
