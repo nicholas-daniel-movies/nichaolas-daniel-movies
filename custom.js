@@ -5,7 +5,8 @@ const generateMovieDisplay = ({
                                   title,
                                   rating,
                                   director = "No Director listed",
-                                    id,
+                                  id,
+                                  genre,
                                 plot
     }) => {
     // make ELEMENTS
@@ -23,6 +24,7 @@ const generateMovieDisplay = ({
     let star = document.createElement('i')
 
     let directorDisplay = document.createElement('p')
+    let genreDisplay = document.createElement('p')
     let deleteButton = document.createElement('button')
     let editButton = document.createElement('button')
 
@@ -98,7 +100,8 @@ const generateMovieDisplay = ({
 
     directorDisplay.setAttribute('class', 'mt-3')
     directorDisplay.innerText = 'Director(s): ' + director
-
+    genreDisplay.setAttribute('class', 'mt-3')
+    genreDisplay.innerText = 'Genre(s): ' + genre
     details.setAttribute('class', 'content-half')
     plotDisplay.setAttribute('class', 'content-half')
     plotDisplay.innerText = plot
@@ -117,6 +120,7 @@ const generateMovieDisplay = ({
     details.appendChild(ratingDisplay)
     details.appendChild(star)
     details.appendChild(directorDisplay)
+    details.appendChild(genreDisplay)
 
     contentDisplay.appendChild(details)
     contentDisplay.appendChild(plotDisplay)
