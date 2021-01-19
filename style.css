@@ -40,7 +40,7 @@
 #searching {
     margin: 0 auto;
     border: 1px solid black;
-
+    box-shadow: 0px 0px 8px black;
     width: 80%
 }
 
