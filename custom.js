@@ -39,7 +39,7 @@ const generateMovieDisplay = ({
 
     deleteButton.innerText = 'Delete?'
     deleteButton.setAttribute('class', 'btn btn-primary')
-    deleteButton.addEventListener("click",function(){
+    deleteButton.addEventListener("click",function(id){
         console.log(id)
         deleteMovie(id)
     })
@@ -49,8 +49,7 @@ const generateMovieDisplay = ({
     editButton.setAttribute('data-toggle', '#modal')
     editButton.setAttribute('data-target', '#editModal')
     editButton.setAttribute('type', 'button')
-    // data-toggle="modal"
-    // data-target="#editModal"
+
     editButton.addEventListener("click",function(){
         $('#editModal').modal('show')
         console.log(id)
