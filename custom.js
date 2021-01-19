@@ -295,6 +295,12 @@ const sortByTitle = () => {
 document.getElementById('rating-sort').addEventListener('click', sortByRatings)
 document.getElementById('title-sort').addEventListener('click', sortByTitle)
 
+const searchByTitle = () => {
+    var searchText = document.getElementById('search').value
+    // if searchText = document.
+}
+
+document.getElementById('searchButton').addEventListener('click', searchByTitle)
 
 // console.log(titleSort);
 
