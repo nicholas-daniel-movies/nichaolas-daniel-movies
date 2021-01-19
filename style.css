@@ -35,6 +35,11 @@
     max-width: 70%;
 }
 
+.single-movie div p {
+    font-family: Impact;
+
+}
+
 footer {
     font-size: 2rem;
     padding: 40px;

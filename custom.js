@@ -80,9 +80,9 @@ const generateMovieDisplay = ({
     })
 
     titleDisplay.setAttribute('class', 'mr-2')
-    titleDisplay.innerText = 'Title: ' + title
+    titleDisplay.innerText = title
 
-    ratingDisplay.innerText = 'Rating: ' + rating
+    ratingDisplay.innerText = rating + ''
 
     directorDisplay.innerText = 'Director(s): ' + director
 
