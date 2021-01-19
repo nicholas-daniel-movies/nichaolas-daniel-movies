@@ -1,5 +1,6 @@
 .single-movie {
     border: 1px solid black;
+    max-width: 70%;
 }
 
 footer {

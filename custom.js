@@ -22,6 +22,8 @@ const generateMovieDisplay = ({
     body.setAttribute('class' , 'single-movie')
     body.setAttribute('id', id)
 
+    firstLine.setAttribute('class', 'd-flex')
+
     deleteButton.innerText = 'Delete?'
     deleteButton.setAttribute('class', 'btn btn-primary')
     deleteButton.addEventListener("click",function(){
@@ -77,11 +79,12 @@ const generateMovieDisplay = ({
 
     })
 
-    titleDisplay.innerText = title
+    titleDisplay.setAttribute('class', 'mr-2')
+    titleDisplay.innerText = 'Title: ' + title
 
-    ratingDisplay.innerText = rating
+    ratingDisplay.innerText = 'Rating: ' + rating
 
-    directorDisplay.innerText = director
+    directorDisplay.innerText = 'Director(s): ' + director
 
     // ASSEMBLY
     firstLine.appendChild(titleDisplay)
