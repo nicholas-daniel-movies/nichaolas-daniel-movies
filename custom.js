@@ -102,6 +102,9 @@ const generateMovieDisplay = ({
     plotDisplay.setAttribute('class', 'content-half')
     plotDisplay.innerText = plot
 
+    buttonsDisplay.appendChild(deleteButton)
+    buttonsDisplay.appendChild(editButton)
+
     // ASSEMBLY
     // firstLine.appendChild(titleDisplay)
     // firstLine.appendChild(ratingDisplay)
