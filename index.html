@@ -9,30 +9,34 @@
 </head>
 <body>
     <header id="top">
-<!--        <div class="jumbotron" id="jumbo"></div>-->
-<!--        <div id="blank"></div>-->
     </header>
 
     <div class="container my-3">
         <div id="sorting">
-            <span class="mr-3">Sort By: </span><span><button class="btn mx-1 btn-primary" id="rating-sort">Rating</button></span> <span><button class="btn mx-1 btn-success" id="title-sort">Title</button></span>
-<!--            <button id="searchButton" class="btn mx-1 bg-dark text-white">Search by Title:</button><input type="text" id="search">-->
+            <span class="mr-3">Sort By: </span>
+            <span><button class="btn mx-1 btn-primary" id="rating-sort">Rating</button></span>
+            <span><button class="btn mx-1 btn-success" id="title-sort">Title</button></span>
             <button id="search-toggle" class="btn mx-1 btn-info">Search</button>
         </div>
     </div>
 
     <div class="container my-3 p-3" id="searching">
         <div class="col-12 col-md-5 form-group">
-            <button id="searchButton" class="btn mx-1 bg-dark text-white mb-2">Search by Title:</button><input type="text" class="form-control" id="search">
+            <button id="searchButton" class="btn mx-1 bg-dark text-white mb-2">Search by Title:</button>
+            <input type="text" class="form-control" id="search">
         </div>
         <div class="col-12 col-md-6 form-group">
-            <button id="searchGenreButton" class="btn mx-1 mb-2 btn-outline-dark">Search by Genre:</button><input type="text" id="genre-search" class="form-control">
+            <button id="searchGenreButton" class="btn mx-1 mb-2 btn-outline-dark">Search by Genre:</button>
+            <input type="text" id="genre-search" class="form-control">
         </div>
     </div>
 
     <div class= "container" id="movie">
         <div id="loading">
-            <h2 id="load-message"><iframe src="https://giphy.com/embed/3oEjI6SIIHBdRxXI40" width="50" height="50" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/mashable-3oEjI6SIIHBdRxXI40">via GIPHY</a></p></h2>
+            <h2 id="load-message">
+                <iframe src="https://giphy.com/embed/3oEjI6SIIHBdRxXI40" width="50" height="50" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                <p><a href="https://giphy.com/gifs/mashable-3oEjI6SIIHBdRxXI40">via GIPHY</a></p>
+            </h2>
         </div>
     </div>
 
@@ -43,35 +47,29 @@
                     <label for="newTitle"><strong>Title</strong></label>
                     <br>
                     <input id="newTitle" class="form-control" type="text" name="title" placeholder="Title">
-<!--                    <br>-->
                 </div>
                 <div class="form-group">
                     <label for="newDirector"><strong>Director</strong></label>
                     <br>
                     <input id="newDirector" class="form-control" type="text" name="director" placeholder="Director">
-<!--                    <br>-->
                 </div>
-
 
                 <div class="form-group">
                     <label for="newRating"><strong>Rating</strong></label>
                     <br>
                     <input id="newRating" class="form-control" type="text" name="rating" placeholder="Rating">
-<!--                    <br>-->
                 </div>
 
                 <div class="form-group">
                     <label for="newPlot"><strong>Plot:</strong></label>
                     <br>
                     <textarea id="newPlot" class="form-control" name="newPlot" cols="32" rows="6"></textarea>
-<!--                    <br>-->
                 </div>
 
                 <div class="form-group">
                     <label for="newGenre"><strong>Genre:</strong></label>
                     <br>
                     <input type="text" id="newGenre" class="form-control" name="newGenre" placeholder="Genre">
-                    <!--                    <br>-->
                 </div>
 
                 <input id="newMovieSubmit" class="btn btn-success" type="submit">
@@ -80,23 +78,12 @@
 
 <!--    MODAL-->
         <section>
-<!--            <button-->
-<!--                    type="button"-->
-<!--                    class="btn btn-primary"-->
-<!--                    data-toggle="modal"-->
-<!--                    data-target="#editModal"-->
-<!--            >CLICK TO OPEN</button>-->
-
             <div
                     class="modal fade"
                     id="editModal"
                     role="dialog">
 
-                <div
-                        class="modal-dialog"
-                        role="document"
-                >
-
+                <div class="modal-dialog" role="document">
                     <div class="modal-content p-3">
                         <div class="modal-header">
                             <h5>Edit</h5>
@@ -110,37 +97,31 @@
                                     <label for="editTitle"><strong>Title</strong></label>
                                     <br>
                                     <input id="editTitle" class="form-control" value="title" type="text" name="title" placeholder="Title">
-<!--                                    <br>-->
                                 </div>
 
                                 <div class="form-group">
                                     <label for="editDirector"><strong>Director</strong></label>
                                     <br>
                                     <input id="editDirector" class="form-control" type="text" name="director" placeholder="Director">
-<!--                                    <br>-->
                                 </div>
 
                                 <div class="form-group">
                                     <label for="editRating"><strong>Rating</strong></label>
                                     <br>
                                     <input id="editRating" class="form-control" type="text" name="rating" placeholder="Rating">
-<!--                                    <br>-->
                                 </div>
 
                                 <div class="form-group">
                                     <label for="editGenre"><strong>Genre</strong></label>
                                     <br>
                                     <input id="editGenre" class="form-control" value="genre" type="text" name="genre" placeholder="Genre">
-                                    <!--                                    <br>-->
                                 </div>
 
                                 <div class="form-group">
                                     <label for="editPlot"><strong>Plot:</strong></label>
                                     <br>
                                     <textarea id="editPlot" class="form-control" name="newPlot" cols="32" rows="6"></textarea>
-<!--                                    <br>-->
                                 </div>
-
 
                                 <input id="editMovieSubmit" class="btn btn-warning" type="submit" data-dismiss="modal">
                             </form>
@@ -156,13 +137,11 @@
         <a href="#top">To Top</a>
     </footer>
 
-<!--    </div>-->
+
     <script src="https://kit.fontawesome.com/10517977d2.js" crossorigin="anonymous"></script>
-<!--    <script src="custom.js"></script>-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
     <script src="custom.js"></script>
 </body>
 </html>
