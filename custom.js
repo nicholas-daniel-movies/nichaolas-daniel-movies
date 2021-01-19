@@ -5,10 +5,17 @@ const generateMovieDisplay = ({
                                   title,
                                   rating,
                                   director = "No Director listed",
-                                    id
+                                    id,
+                                plot
     }) => {
     // make ELEMENTS
     let body = document.createElement('div')
+    let contentDisplay = document.createElement('div')
+    let details = document.createElement('div')
+    let plotDisplay = document.createElement('div')
+    let buttonsDisplay = document.createElement('div')
+
+
     let firstLine = document.createElement('div')
 
     let titleDisplay = document.createElement('p')
@@ -80,6 +87,8 @@ const generateMovieDisplay = ({
 
     })
 
+    contentDisplay.setAttribute('class', 'd-flex')
+
     titleDisplay.setAttribute('class', 'mr-2')
     titleDisplay.innerText = title
 
@@ -89,15 +98,30 @@ const generateMovieDisplay = ({
 
     directorDisplay.innerText = 'Director(s): ' + director
 
-    // ASSEMBLY
-    firstLine.appendChild(titleDisplay)
-    firstLine.appendChild(ratingDisplay)
-    firstLine.appendChild(star)
+    details.setAttribute('class', 'content-half')
+    plotDisplay.setAttribute('class', 'content-half')
+    plotDisplay.innerText = plot
 
-    body.appendChild(firstLine)
-    body.appendChild(directorDisplay)
-    body.appendChild(deleteButton)
-    body.appendChild(editButton)
+    // ASSEMBLY
+    // firstLine.appendChild(titleDisplay)
+    // firstLine.appendChild(ratingDisplay)
+    // firstLine.appendChild(star)
+
+    details.appendChild(titleDisplay)
+    details.appendChild(ratingDisplay)
+    details.appendChild(star)
+    details.appendChild(directorDisplay)
+
+    contentDisplay.appendChild(details)
+    contentDisplay.appendChild(plotDisplay)
+
+    body.appendChild(contentDisplay)
+    body.appendChild(buttonsDisplay)
+
+    // body.appendChild(firstLine)
+    // body.appendChild(directorDisplay)
+    // body.appendChild(deleteButton)
+    // body.appendChild(editButton)
 
     document.getElementById('movie').appendChild(body)
 

@@ -41,6 +41,10 @@
 
 }
 
+.content-half {
+    width: 50%;
+}
+
 #addForm{
     border: 1px solid black;
     max-width: 50%;
