@@ -296,8 +296,16 @@ document.getElementById('rating-sort').addEventListener('click', sortByRatings)
 document.getElementById('title-sort').addEventListener('click', sortByTitle)
 
 const searchByTitle = () => {
+    $('#movie').html("<div class= \"container\" id=\"movie\">\n" +
+
+        "    </div>")
     var searchText = document.getElementById('search').value
-    // if searchText = document.
+
+    let searchedArray = localMovies.filter(movie => {
+        return movie.title.includes(searchText)
+    })
+
+    searchedArray.map(result => generateMovieDisplay(result))
 }
 
 document.getElementById('searchButton').addEventListener('click', searchByTitle)
