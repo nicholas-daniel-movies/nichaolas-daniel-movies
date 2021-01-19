@@ -20,7 +20,7 @@ const generateMovieDisplay = ({
     let editButton = document.createElement('button')
 
     // ADD CONTENT
-    body.setAttribute('class' , 'single-movie')
+    body.setAttribute('class' , 'single-movie my-3 p-3')
     body.setAttribute('id', id)
 
     firstLine.setAttribute('class', 'd-flex')
