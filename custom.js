@@ -1,6 +1,14 @@
 let url = "https://fluttering-achieved-syringa.glitch.me/movies"
 let localMovies = []
 
+// $().ready(function(){
+//     // $('#searching').hide()
+//     $('#search-toggle').click(function(){
+//         $('#searching').slideUp()
+//     })
+// })
+
+
 const generateMovieDisplay = ({
                                   title,
                                   rating,
